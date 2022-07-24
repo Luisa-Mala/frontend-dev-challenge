@@ -8,3 +8,23 @@ h1, h2, h3, h4, h5, h6{
   font-weight: bold;
   
 }
+
+
+/*
+* @Utils
+*
+*/
+
+.mobile{
+  display: none;
+  @media screen and (max-width: 800px) {
+    display: block;
+  }
+}
+
+.desktop{
+  display: block;
+  @media screen and (max-width: 800px) {
+    display: none;
+  }
+}
