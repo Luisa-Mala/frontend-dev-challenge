@@ -1,0 +1,56 @@
+.input {
+  display: flex;
+  transition: all 0.3s ease-in-out;
+
+  input,
+  select {
+    border: 1px solid $lightGray;
+    border-radius: 10px;
+    padding: 0.4rem 1rem;
+    width: 100%;
+    font-size: 16px;
+    background-color: transparent;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    &::placeholder {
+      color: $gray;
+    }
+  }
+  &.ic-search {
+    position: relative;
+    input {
+      padding-right: 2.5rem;
+    }
+    &::after {
+      content: "";
+      width: 22px;
+      height: 22px;
+      background-image: url("/icons/ic-search.svg");
+      position: absolute;
+      top: 0;
+      right: 1rem;
+      bottom: 0;
+      margin: auto;
+      background-repeat: no-repeat;
+    }
+  }
+  &.icon{
+    width: 25px;
+    input{
+      padding: 0.4rem 1rem;
+      border: none;
+    }
+    &::after{
+      right: 0;
+      border: none;
+    }
+    &.active{
+      max-width: 200px;
+      width: 100%;
+      input{
+        border-bottom: 1px solid $lightGray;
+        border-radius: 0;
+      }
+    }
+  }
+}
