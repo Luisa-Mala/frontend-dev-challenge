@@ -1,42 +1,34 @@
-<p align="center">
-  <a href='https://weremote.net'>
-    <img src="https://weremote.net/wp-content/uploads/2021/04/Logo-WR.svg" width="300" />
-  </a>
-</p>
-<br />
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Descripción
-**Frontend DEV Challenge** es una prueba de admisión para desarrolladores en HTML, CSS, JavaScript.
+## Getting Started
 
-## Pasos
-1. Crear un **fork** y entregar el enlace del repositorio de tu usuario. Evaluaremos la prueba en tu repositorio personal.
-2. Utilizar el diseño que debe finalizar y que está disponible en Figma (solo una pantalla): https://www.figma.com/file/FxX6dCznISsNkztnRa59Rf/Figma-Test?node-id=0%3A1
-3. Montar el código en HTML5, CSS3 y JS con efectos y animaciones.
-4. Usar buenas prácticas de HTML para SEO.
+First, run the development server:
 
-## Buenas prácticas y sugerencias
-1. Mobile first.
-2. Layout responsive y cross-browser.
-3. Código legible y bien estructurado.
-4. HTML optimizado para SEO.
-5. Idioma del código y comentarios en inglés.
-6. Se puede utilizar una UI lib **solo para el GRID**, el resto debe ser desarrollado (colores, textos, botones, forms, paddings, margins, etc).
-7. **CSS**  
-a. Usar animaciones simples de hover, animaciones de mensaje del formulario o de búsqueda, etc. 
-b. Usar **nomenclatura BEM** para estilos.   
-c. Utilizar los estilos de color y textos **creados en Figma**.   
-d. Utilizar 8px GRID para espacios, paddings, margins.  
-e. Si se considera necesario, se pueden utilizar variables.  
-8. **JavaScript**  
-a. **No utilizar jQuery**, solamente JS puro ES6.  
-b. Utilizar la nomenclatura **camelCase**.  
-c. Como sugerencia: recomendamos crear una función de *alert* para enviar el formulario (puede ser envío falso, solo una alerta), un Listener de scroll para mostrar/ocultar algún botón o el banner fijo/flotante, click del FAQ/Accordion, abrir y cerrar un modal.
+```bash
+npm run dev
+# or
+yarn dev
+```
 
-## Plus
-1. Componer el proyecto en **ReactJS** (no olvidar añadir el readme al proyecto final).
-2. SCSS/SASS
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Fecha límite
-1. Siete días (7 días) a partir del correo electrónico de envío del Desafío Tech. La fecha exacta está en el correo electrónico.
-2. Notificar en el correo electrónico la finalización y enviar solamente la url del repositorio para evaluación.
-3. Utilizar siempre en el correo electrónico la opción "Responder a todos".
+You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+
+[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+
+The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+
+## Learn More
+
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
