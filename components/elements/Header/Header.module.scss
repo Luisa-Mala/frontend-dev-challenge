@@ -1,3 +1,5 @@
+@import '../../../sass/lib/variables';
+
 .header{
   display: grid;
   grid-template-columns: 1fr auto 1fr;
@@ -8,7 +10,7 @@
   position: relative;
   &__hamburger{
       grid-area: left;
-      z-index: 100;
+      z-index: 200;
       display: inline-block;
       cursor: pointer;
       transition-property: opacity,-webkit-filter;
@@ -62,15 +64,18 @@
             transition: top 75ms ease .12s,opacity 75ms ease;
           }
           &[class~=active]{
+            background-color: $purple;
             transform: rotate(45deg);
             transition-delay: .12s;
             transition-timing-function: cubic-bezier(.215,.61,.355,1);
             &::before{
+              background-color: $purple;
               top: 0;
               opacity: 0;
               transition: top 75ms ease,opacity 75ms ease .12s;
             }
             &::after{
+              background-color: $purple;
               bottom: 0;
               -webkit-transform: rotate(-90deg);
               transform: rotate(-90deg);
@@ -91,15 +96,57 @@
     justify-content: flex-end;
   }
   &__nav{
-    width: 400px;
+    max-width: 410px;
+    width: 100%;
     height: 100vh;
-    background-color: pink;
+    background-color: white;
     position:absolute;
     left: -100%;
     top: 0;
     transition: all 0.3s ease-in-out;
+    box-shadow: 1px 4px 7px 0px #666666a6;
+    padding: 100px 50px 100px clamp(33px, 5vw, 120px);
+    z-index: 100;
     &[class~=active]{
       left: 0;
+    }
+    &--item{
+      margin-bottom: 2rem;
+      font-family: $font-secondary;
+      [class~=category]{
+        font-size: 24px;
+        font-weight: bold;
+        padding-bottom: 10px;
+        margin-bottom: 8px;
+        border-bottom: 1px solid $lightGray;
+        color: $purple;
+
+      }
+      ul{
+        list-style: none;
+        li{
+          padding: 0.5rem 0;
+          a{
+            width: 100%;
+            display: block;
+            position: relative;
+            &::after{
+              content: " ";
+              background-image: url("/icons/ic-arrow.svg");
+              position: absolute;
+              width: 24px;
+              height: 24px;
+              right: 1rem;
+              transition: all 0.3s ease-in-out;
+            }
+            &:hover{
+              &::after{
+                right: 0;
+              }
+            }
+          }
+        }
+      }
     }
   }
 
