@@ -1,0 +1,8 @@
+.hero{
+  position: relative;
+  height: clamp(50vh, 50vw, 80vh);
+  width: 100%;
+  &__slider{
+    height: 100%;
+  }
+}

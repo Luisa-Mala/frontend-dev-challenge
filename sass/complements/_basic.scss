@@ -28,3 +28,25 @@ h1, h2, h3, h4, h5, h6{
     display: none;
   }
 }
+
+/*
+* @Image next
+*
+*/
+
+.imageNext{
+  width: 100%;
+  height: 100%;
+  > div {
+    position: unset !important;
+    width: 100%;
+    height: 100%;
+  }
+  .image{
+    object-fit: cover;
+    object-position: center;
+    width: 100% !important;
+    position: relative !important;
+    height: 100% !important;
+  }
+}
