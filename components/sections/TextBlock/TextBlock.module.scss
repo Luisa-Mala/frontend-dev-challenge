@@ -1,0 +1,76 @@
+@import '../../../sass/lib/variables';
+
+.textBlock{
+  padding-top: clamp(33px, 5vw, 120px);
+  padding-bottom: clamp(33px, 5vw, 120px);
+  background: rgb(247,120,185);
+  background: linear-gradient(0deg, rgba(247,120,185,1) 0%, rgba(247,120,185,1) 55%, rgba(255,255,255,1) 55%);
+  &__container{
+    &--title{
+      display: flex;
+      align-items: center;
+      h1{
+        max-width: 600px;
+        width: 100%;
+        font-size: clamp(25px, 3vw, 50px);
+        margin: 0 auto 6rem;
+        line-height: 1;
+        padding-left: 4rem;
+
+      }
+    }
+    &--description{
+      display: flex;
+      align-items: center;
+      position: relative;
+      justify-content: space-between;
+      top: -4rem;
+      &_info{
+        max-width: 540px;
+        width: 100%;
+        padding-right: 4rem;
+        h2{
+          font-size: clamp(20px, 3vw, 40px);
+          margin-bottom: 1.5rem;
+          line-height: 1;
+        }
+        p{
+          line-height: 2;
+          font-size: clamp(14px, 3vw, 16px);
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 991px){
+    &__container{
+      &--description{
+        top: 0;
+      }
+    }
+  }
+  @media screen and (max-width: 766px){
+    padding-right: 30px;
+    padding-left: 30px;
+    background: linear-gradient(0deg, rgb(247, 120, 185) 0%, rgb(247, 120, 185) 70%, rgb(255, 255, 255) 70%);
+    &__container{
+
+      &--title{
+        flex-direction: column-reverse;
+        h1{
+          margin: 2rem auto 2rem;
+          padding-left: 0;
+        }
+      }
+      &--description{
+        padding-top: 3rem;
+        top: 0;
+        flex-direction: column;
+        &_info{
+          padding-right: 0;
+          padding-bottom: 3rem;
+        }
+      }
+    }
+  }
+}
