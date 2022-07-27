@@ -1,4 +1,4 @@
-import { Aside, BlogBlock, Hero, TextBlock } from "@/components/sections";
+import { Aside, BlogBlock, Hero, Testimonials, TextBlock } from "@/components/sections";
 import { Layout } from "@/components/sections/Layout";
 
 export default function Home() {
@@ -19,6 +19,7 @@ export default function Home() {
           }}
         />
       </section>
+      <Testimonials/>
     </Layout>
   );
 }

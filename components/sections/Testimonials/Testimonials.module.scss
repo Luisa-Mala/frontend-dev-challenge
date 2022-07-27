@@ -1,0 +1,27 @@
+.testimonials{
+  padding-top: clamp(1rem, 4vw, 4rem);
+  padding-bottom: 4rem;
+  &__slide{
+    max-width: 570px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 2rem 0;
+    font-style: italic;
+    text-align: center;
+    line-height: 2;
+    &--author{
+      display: block;
+      font-weight: bold;
+      font-style: normal;
+      margin: 1rem 0;
+    }
+  }
+  [class~=swiper-pagination-bullet-active]{
+    background-color: gray;
+  }
+  @media screen and (max-width: 800px){
+    [class~=heading]{
+      text-align: center;
+    }
+  }
+}
