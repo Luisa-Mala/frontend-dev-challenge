@@ -1,8 +1,11 @@
 @import "./lib/";
 @import "./complements/";
+@import "./pages/";
+
 
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Source+Sans+Pro:wght@400;700&display=swap');
 
 body{
   font-family: $font-main;
+  color: $gray;
 }

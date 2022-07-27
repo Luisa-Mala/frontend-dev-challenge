@@ -1,0 +1,15 @@
+.aside{
+  max-width: 355px;
+  width: 100%;
+  margin: 0 auto;
+  &__searh{
+
+  }
+  &__post{
+
+  }
+  &__promo{
+   display: flex;
+   justify-content: center;
+  }
+}
