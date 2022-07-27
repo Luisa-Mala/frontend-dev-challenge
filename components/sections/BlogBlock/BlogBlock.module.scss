@@ -1,0 +1,35 @@
+@import '../../../sass/lib/variables';
+
+.blogBlock{
+  &__title{
+  }
+  &__author{
+    display: flex;
+    align-items: center;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid $lightGray;
+    p{
+      padding-left: 1rem;
+    }
+  }
+  &__blockquote{
+    font-family: $font-secondary;
+    border-left: 5px solid $purple;
+    padding-left: 1rem;
+    margin: clamp(2rem, 5vw, 4rem) 0;
+  }
+  &__image{
+    position: relative;
+    height: clamp(200px, 25vw, 400px);
+    margin-bottom: clamp(2rem, 5vw, 4rem);
+  }
+  &__description{
+    padding-bottom: 1rem;
+    span{
+      color: $purple;
+    }
+  }
+  &__readMore{
+
+  }
+}
