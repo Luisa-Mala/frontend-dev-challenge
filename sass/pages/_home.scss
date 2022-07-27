@@ -1,14 +1,20 @@
-.home{
-  &__blog{
-    padding-top: 4rem;
+.home {
+  &__blog {
+    padding-top: clamp(4rem, 7vw, 6rem);
     padding-bottom: 4rem;
     display: grid;
-    grid-template-columns: 1fr 400px;
+    grid-template-columns: 1fr max-content;
+    gap: clamp(3rem, 5vw, 8rem);
   }
 
-  @media screen and (max-width: 800px){
-    &__blog{
+  @media screen and (max-width: 991px) {
+    &__blog {
+      padding-right: 30px;
+      padding-left: 30px;
       display: block;
+      [class~=blogBlock]{
+        margin-bottom: 3rem;
+      }
     }
   }
 }
