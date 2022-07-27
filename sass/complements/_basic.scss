@@ -9,6 +9,56 @@ h1, h2, h3, h4, h5, h6{
   color: #414141;
 }
 
+.heading{
+  font-size: clamp(20px, 3vw, 40px);
+  margin-bottom: 1.5rem;
+  color: $indigo;
+  line-height: 1;
+}
+
+/*
+* @Text
+*
+*/
+
+.text{
+  line-height: 2
+}
+
+/*
+* @Link
+*
+*/
+
+.btn-link{
+  display: block;
+  margin: 1rem 0;
+  padding-right: 3rem;
+  color: $purple;
+  position: relative;
+  width: max-content;
+  font-family: $font-secondary;
+  font-size: 18px;
+  &::before{
+    content: "";
+    background-image: url("/icons/ic-arrow-purple.svg");
+    width: 19px;
+    height: 13px;
+    position: absolute;
+    right: 1rem;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    transition: all 0.3s ease-in-out;
+  }
+  &:hover{
+    color: $purple;
+    &::before{
+      right: 0;
+    }
+  }
+}
+
 
 /*
 * @Utils
