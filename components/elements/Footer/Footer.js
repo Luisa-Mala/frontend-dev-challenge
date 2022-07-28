@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Input } from "../Input/Input";
 import styles from "./Footer.module.scss";
 import { useFormik } from "formik";
+import Link from "next/link";
 
 export const Footer = () => {
 
@@ -57,7 +58,7 @@ export const Footer = () => {
           <nav>
             <ul>
               <li>
-                <a href="/faq">FAQ</a>
+                <Link href="/faq">FAQ</Link>
               </li>
               <li>
                 <a>Lorem ipsum</a>

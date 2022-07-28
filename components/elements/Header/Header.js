@@ -1,12 +1,12 @@
-import Image from "next/image"
-import { useState } from "react"
-import { Input } from "../Input/Input"
-import styles from "./Header.module.scss"
-import {data} from "./dataHeader"
+import Image from "next/image";
+import { useState } from "react";
+import { Input } from "../Input/Input";
+import styles from "./Header.module.scss";
+import { data } from "./dataHeader";
+import Link from "next/link";
 
 export const Header = () => {
-
-  const [isActive, setIsActive] = useState(false)
+  const [isActive, setIsActive] = useState(false);
 
   return (
     <header className={styles.header}>
@@ -25,14 +25,23 @@ export const Header = () => {
           />
         </span>
       </button>
-      <div className={`${styles["header__nav"]} ${isActive ? "active" : "disabled"}`}>
+      <div
+        className={`${styles["header__nav"]} ${
+          isActive ? "active" : "disabled"
+        }`}
+      >
         <nav>
-          {data.menu.map((item, index) =>(
-            <div className={`${styles["header__nav--item"]}`} key={"nav"+index}>
+          {data.menu.map((item, index) => (
+            <div
+              className={`${styles["header__nav--item"]}`}
+              key={"nav" + index}
+            >
               <p className="category">{item.category}</p>
               <ul>
                 {item.nav.map((linkItem, idx) => (
-                  <li key={"linkItem"+idx}><a href={linkItem.url}>{linkItem.label}</a></li>
+                  <li key={"linkItem" + idx}>
+                    <a href={linkItem.url}>{linkItem.label}</a>
+                  </li>
                 ))}
               </ul>
             </div>
@@ -40,22 +49,26 @@ export const Header = () => {
         </nav>
       </div>
       <div className={`${styles["header__logo"]}`}>
-        <div className="desktop">
-          <Image
-            src="/images/logo.svg"
-            alt="logo mejor con salud"
-            width="216px"
-            height="38px"
-          />
-        </div>
-        <div className="mobile">
-          <Image
-            src="/icons/ic-logo.svg"
-            alt="logo mejor con salud"
-            width="60px"
-            height="40px"
-          />
-        </div>
+        <Link href="/">
+          <div className="desktop">
+            <Image
+              src="/images/logo.svg"
+              alt="logo mejor con salud"
+              width="216px"
+              height="38px"
+            />
+          </div>
+        </Link>
+        <Link href="/">
+          <div className="mobile">
+            <Image
+              src="/icons/ic-logo.svg"
+              alt="logo mejor con salud"
+              width="60px"
+              height="40px"
+            />
+          </div>
+        </Link>
       </div>
       <div className={`${styles["header__search"]}`}>
         <Input
@@ -69,4 +82,4 @@ export const Header = () => {
       </div>
     </header>
   );
-}
+};
