@@ -5,9 +5,7 @@ export const Input = ({ data, addClass="", ...args }) => {
       {data.type === "text" ||
       data.type === "email" ||
       data.type === "password" ? (
-        <div
-          className={`input ${addClass}`}
-        >
+        <div className={`input ${addClass}`}>
           <label>{data.label}</label>
           <input
             id={data.id}
@@ -37,6 +35,19 @@ export const Input = ({ data, addClass="", ...args }) => {
               ))}
             </select>
           </div>
+        </div>
+      ) : data.type === "submit" ? (
+        <div className={`input ${addClass}`}>
+          <input
+            className="submit"
+            //className={`submitBtn ${sendData && `${styles["btnDisabled"]}`}`}
+            id={data.id}
+            name={data.name}
+            type="submit"
+            value={data.label}
+            disabled={data.disabled}
+            {...args}
+          />
         </div>
       ) : null}
     </>

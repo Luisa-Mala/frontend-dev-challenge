@@ -1,12 +1,12 @@
 .input {
   display: flex;
   transition: all 0.3s ease-in-out;
-
+  position: relative;
   input,
   select {
     border: 1px solid $lightGray;
-    border-radius: 10px;
-    padding: 0.4rem 1rem;
+    border-radius: 5px;
+    padding: 0.8rem 1rem;
     width: 100%;
     font-size: 16px;
     background-color: transparent;
@@ -16,8 +16,16 @@
       color: $gray;
     }
   }
+  &.bg-light{
+    input{
+      border-color: white;
+      color: white;
+      &::placeholder{
+        color: white;
+      }
+    }
+  }
   &.ic-search {
-    position: relative;
     input {
       padding-right: 2.5rem;
     }
@@ -50,6 +58,37 @@
       input{
         border-bottom: 1px solid $lightGray;
         border-radius: 0;
+      }
+    }
+  }
+  &.submit{
+    background-color: $pink;
+    border-radius: 5px;
+    [type="submit"]{
+      color: white;
+      padding-right: 3rem;
+      font-weight: bold;
+      cursor: pointer;
+      border-color: $pink;
+    }
+    &::after {
+      content: "";
+      width: 30px;
+      height: 30px;
+      background-image: url("/icons/ic-arrow.svg");
+      position: absolute;
+      top: 0;
+      right: 0.8rem;
+      bottom: 0;
+      margin: auto;
+      background-repeat: no-repeat;
+      background-size: cover;
+      filter: brightness(0) invert(1);
+      transition: all 0.3s ease-in-out;
+    }
+    &:hover{
+      &::after{
+        right: 0.2rem;
       }
     }
   }

@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { useState, useEffect } from "react";
-import { Header } from "../elements";
+import { Footer, Header } from "../elements";
 
 export const Layout = ({ children, title }) => {
   return (
@@ -12,6 +12,7 @@ export const Layout = ({ children, title }) => {
       </Head>
       <Header />
       <main>{children}</main>
+      <Footer/>
     </>
   );
 };

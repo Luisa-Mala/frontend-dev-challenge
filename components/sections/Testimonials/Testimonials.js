@@ -7,8 +7,7 @@ import styles from "./Testimonials.module.scss";
 
 export const Testimonials = () => {
   return (
-    <section className={`${styles["testimonials"]} container`}>
-      <h2 className="heading">Testimonios</h2>
+    <section className={`${styles["testimonials"]}`}>
       <Swiper
         pagination={true}
         modules={[Pagination, Autoplay]}
