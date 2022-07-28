@@ -1,8 +1,19 @@
 import Image from "next/image";
 import { Input } from "../Input/Input";
 import styles from "./Footer.module.scss";
+import { useFormik } from "formik";
 
 export const Footer = () => {
+
+  const formik = useFormik({
+    initialValues: {
+      email: "",
+    },
+    onSubmit: (values) => {
+      alert(JSON.stringify(values, null, 2));
+    },
+  });
+
   return (
     <footer className={`${styles["footer"]}`}>
       <div className={`${styles["footer__subscribe"]}`}>
@@ -17,15 +28,17 @@ export const Footer = () => {
           </div>
           <div className={`${styles["footer__subscribe--form-input"]}`}>
             <p>Subscribete</p>
-            <div>
+            <form onSubmit={formik.handleSubmit}>
               <Input
                 addClass="bg-light"
                 data={{
                   type: "email",
                   id: "email-subscribe",
-                  name: "email-subscribe",
+                  name: "email",
                   placeholder: "Correo",
+                  isRequired: true,
                 }}
+                onChange={formik.handleChange}
               />
               <Input
                 addClass="submit"
@@ -36,16 +49,22 @@ export const Footer = () => {
                   label: "Enviar",
                 }}
               />
-            </div>
+            </form>
           </div>
         </div>
         <div className={`${styles["footer__subscribe--menu"]}`}>
           <p>Menu</p>
           <nav>
             <ul>
-              <li><a href="/faq">FAQ</a></li>
-              <li><a>Lorem ipsum</a></li>
-              <li><a>Lorem ipsum</a></li>
+              <li>
+                <a href="/faq">FAQ</a>
+              </li>
+              <li>
+                <a>Lorem ipsum</a>
+              </li>
+              <li>
+                <a>Lorem ipsum</a>
+              </li>
             </ul>
           </nav>
         </div>
