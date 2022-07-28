@@ -1,0 +1,67 @@
+@import "../../../sass/lib/variables";
+
+.accordion {
+  margin: 0 auto;
+  padding: 4rem 0 5rem;
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid $indigo;
+    &--container {
+      max-width: 900px;
+      width: 90%;
+      details {
+        summary {
+          display: flex;
+          position: relative;
+          line-height: 1;
+          padding: 1.5rem 0;
+          cursor: pointer;
+          &::-webkit-details-marker {
+            display: none;
+          }
+          svg {
+            position: absolute;
+            height: 0.6rem;
+            right: 1.5rem;
+            top: calc(50% - 0.2rem);
+            fill: $indigo;
+            stroke: $indigo;
+            transition: all 0.3s ease-in-out;
+          }
+        }
+        &[open] {
+          summary ~ * {
+            animation-name: open;
+            animation-duration: 500ms, 200ms;
+            animation-delay: 0ms, 500ms;
+          }
+          summary {
+            svg{
+              transform: rotate(180deg);
+            }
+          }
+        }
+      }
+      &-title {
+        font-size: 20px;
+        color: $indigo;
+        margin-right: 5rem;
+      }
+      &-description {
+        padding-bottom: 2rem;
+      }
+    }
+  }
+}
+
+@keyframes open {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
